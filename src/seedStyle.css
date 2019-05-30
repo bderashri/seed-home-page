@@ -1,0 +1,26 @@
+.panel{
+    width:795px;
+    height:325px;
+    padding-left:260px;
+    padding-top:100px;
+    background-color:#D3D3D3;
+    align-items:center;
+    display:block;
+    
+}
+
+.cardTemp{
+width:250px;
+height:130px;
+background:white;
+border-radius:15px;
+margin-top:2px;
+margin-left:5px; 
+float:left;
+color:black;
+font-size: 14px;
+text-align:left;
+padding:5px;
+position:relative;
+}
+

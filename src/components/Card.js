@@ -1,18 +1,17 @@
 import React, {Component} from 'react';
-import '../seedStyle.css';
+import '../seedActualStyle.css';
 
  class Card extends Component{
 
     render(){
-        console.log("inside card")
-        console.log(this.props.data)
+        
         return(
         
-            <div className="cardTemp">
-                <div style={{color:'blue',fontWeight:'bold'}}>{this.props.comment}</div>
-                <div style={{fontSize:'10px',fontWeight:'bold'}}>  {this.props.date}</div>
-                <h4> {this.props.mainline}</h4>
-                <div style={{color:'green',fontWeight:'bold',position:'absolute',verticalAlign:'bottom'}}>{this.props.category}</div>
+            <div className="Rectangle-231">
+                <div className="Rectangle-312" >  {this.props.comment}  </div>
+                <div className="date">     {this.props.date}     </div>
+                <div className="mainline"> {this.props.mainline} </div> 
+                <div className="ctgry"> {this.props.category} </div>
             </div>
 
         )

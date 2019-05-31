@@ -1,8 +1,15 @@
+
+.page{
+    background-color: #D3D3D3;
+    width:max-content;
+    height:max-content;
+    display:block;
+}
 .panel{
-    width:795px;
-    height:325px;
-    padding-left:260px;
-    padding-top:100px;
+    width:855px;
+    height:350px;
+    padding-left:230px;
+    margin-top:10px;
     background-color:#D3D3D3;
     align-items:center;
     display:block;
@@ -10,17 +17,86 @@
 }
 
 .cardTemp{
-width:250px;
-height:130px;
-background:white;
-border-radius:15px;
-margin-top:2px;
-margin-left:5px; 
-float:left;
-color:black;
-font-size: 14px;
-text-align:left;
-padding:5px;
-position:relative;
+    width:250px;
+    height:130px;
+    background:white;
+    border-radius:15px;
+    margin-top:2px;
+    margin-left:5px; 
+    float:left;
+    color:black;
+    font-size: 14px;
+    text-align:left;
+    padding:10px;
+    position:relative;
 }
 
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: blue;
+    border-radius: 50%;
+    float:left;
+    margin:5px;
+  }
+
+.comment{
+    color:blue;
+    
+}
+
+.date{
+    font-size:10px;
+    font-weight:bold;
+    padding-top:3px;
+}
+.date:hover {
+    border:lightgray 1px solid;
+}
+
+
+.mainline{
+    font-size:18px;
+    font-weight:bold;
+    padding-top:10px;
+}
+.mainline:hover{
+    box-shadow: 10px,10px;
+}
+
+.category{
+    color:green;
+    font-weight:bold;
+    position:absolute;
+    bottom:0;
+    left:5;
+    padding-bottom:3px;
+}
+
+.ideas{
+    color:black;
+    font-weight:bold;
+    padding-left:240px;
+    padding-top:50px;
+}
+
+.assets{
+    color:black;
+    font-weight:bold;
+    padding-top:10px;
+    padding-left:240px;
+}
+
+.btn{
+    background-color: blue;
+    border: none;
+    text-align: center;
+    display: inline-block;
+    font-size: 12px;
+    width:30px;
+    height:30px;
+    color:white;
+    float:right;
+    margin:20px;
+
+}

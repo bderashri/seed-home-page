@@ -155,19 +155,21 @@
   }
 
 .Rectangle-341 {
-    width: 220.67px;
+    width: 116.67px;
     height: 36px;
-    position:absolute;
+    margin-bottom:13px;
+    /*position:absolute;
     left:142px;
-    top:300px;
+    top:300px;*/
     border-radius: 20px;
     background-color:blue;
     box-shadow: 0 0 50px 0 rgba(208, 200, 240, 0.16);
     background-image: linear-gradient(to bottom, #c1cfff, #cdddfc);
+    float:left;
   }
 .ideasButton{
+  margin-left:50px;
   text-align:center;
-  margin-top:13px;
   font-family: Objective;
   font-size: 10px;
   font-weight: bold;
@@ -175,14 +177,15 @@
   font-stretch: normal;
   line-height: 0.87;
   letter-spacing: normal;
-  text-align: center;
   color: #05276c;
+  display:inline;
 }
 
 .assetsButton{
-  margin-left:116.67px;
+  margin-left:45px;
   text-align:center;
-  margin-top:13px;
+  /*margin-top:13px;*/
+  /*padding:13px;*/
   font-family: Objective;
   font-size: 10px;
   font-weight: bold;
@@ -190,19 +193,21 @@
   font-stretch: normal;
   line-height: 0.87;
   letter-spacing: normal;
-  text-align: center;
   color: #05276c;
+  display:inline;
 }
 
 .Rectangle-311 {
     width: 116.67px;
     height: 36px;
-    position:absolute;
+    /*margin-left: 127px;
+    /*position:absolute;
     left:142px;
-    top:300px;
+    top:300px;*/
     border-radius: 20px;
     box-shadow: 0 0 50px 0 rgba(208, 200, 240, 0.16);
     background-color: #ffffff;
+    float:left;
    
 }
 
@@ -223,51 +228,57 @@
 .Ellipse-43 {
     width: 36px;
     height: 36px;
-    position:absolute;
+    margin-left: 400px;
+    /*position:absolute;
     top:299.3px;
-    left:916.6px;
+    left:916.6px;*/
     border-radius:18px;
     box-shadow: 3px 3px 15px 0 rgba(170, 186, 201, 0.16);
     background-color: #ffffff;
-   
+    padding-left:10px;
+    padding-top:4px;
 }
 
 .filter {
     width: 14.26px;
     height: 14px;
-    position:absolute;
+   
+   /* position:absolute;
     top:311px;
-    left:928.46px;
-    object-fit: contain;
+    left:928.46px;*/
+    
   }
 
 .Rectangle-232 {
     width: 144px;
     height: 36px;
-    position:absolute;
+    /*position:absolute;
     top:299.3px;
-    left:959.33px;
+    left:959.33px;*/
     border-radius: 21.33px;
     box-shadow: 0 0 50px 0 rgba(208, 200, 240, 0.16);
     background-color: #ffffff;
-  
+    float:left;
   }
 
 .seed-26 {
     width: 13.26px;
     height: 14.46px;
-    position:absolute;
+    margin-left:10px;
+    margin-top:4px;
+    display:inline-block;
+    /*position:absolute;
     left:972.66px;
     top:310px;
-    object-fit: contain;
+    object-fit: contain;*/
   }
 
 .Sort-by {
     width: 38px;
     height: 9.33px;
-    position:absolute;
+  /*  position:absolute;
     top:311px;
-    left:994px;
+    left:994px;*/
     font-family: Objective;
     font-size: 10px;
     font-weight: bold;
@@ -282,10 +293,10 @@
 .Arrow---SEED-20 {
     width: 8px;
     height: 4.67px;
-    position:absolute;
+   /* position:absolute;
     top:316px;
     left:1083.33px;
-    object-fit: contain;
+    object-fit: contain;*/
   }
 
 .Rectangle-231 {
@@ -298,9 +309,23 @@
     float:left;
     margin:7px;
   }
+.Rectangle-231 .date{
+  color: #05276c;
+}
+ 
+.Rectangle-231 .mainline{
+  color:#05276c;;
+}
 
-  .Rectangle-231-ready {
-    
+.Rectangle-231 .comment{
+  color: #3b42ff;
+}
+
+.Rectangle-231 .ctgry{
+  color: #00cf73;
+}
+
+.Rectangle-231-ready {
     width: 325.26px;
     height: 170.13px;
     border-radius: 21.33px;
@@ -310,7 +335,22 @@
     float:left;
     margin:7px;
   }
-
+  .Rectangle-231-ready .date{
+    color: #ffffff;
+  }
+  
+  .Rectangle-231-ready .mainline{
+    color:#ffffff;
+  }
+  
+  .Rectangle-231-ready .comment{
+    color: #ffffff;
+  }
+  
+  .Rectangle-231-ready .ctgry{
+    color: #ffffff;
+  }
+  
 .Rectangle-312 {
     width: 13.53px;
     height: 28.8px;
@@ -344,7 +384,6 @@
   padding-left:18.8px;
   padding-top:10.06px;
   margin-top:19.73px;
-  
   font-family: Objective;
   font-size: 10px;
   font-weight: bold;
@@ -355,6 +394,7 @@
   color: #ffffff;
   float:left;    
 }
+
 .Rectangle-312-ready {
   width: 26.86px;
   height: 26.86px;
@@ -375,7 +415,6 @@
   letter-spacing: normal;
   color: #ffffff;
   float:left;    
- 
 }
 
 .check{
@@ -383,7 +422,7 @@
   height:7.93px;
   display:block;
   color:white;
-  
+  transform: rotate(10deg)
 }
 
 .Path-11326 {
@@ -403,9 +442,7 @@
     line-height: 1;
     letter-spacing: normal;
     text-align: left;
-    color: #3b42ff;
 }
-
 
 .date {
     margin-left:25px;
@@ -418,7 +455,6 @@
     line-height: 1.2;
     letter-spacing: normal;
     text-align: left;
-    color: #05276c;
  }
 
 .mainline {
@@ -434,7 +470,6 @@
     line-height: 1;
     letter-spacing: normal;
     text-align: left;
-    color: #05276c;
     float:left;
  }
 
@@ -450,10 +485,8 @@
     line-height: 1.2;
     letter-spacing: normal;
     text-align: left;
-    color: #00cf73;
     float:left;
 }
-
 
 .My-Assets {
     width: 96px;
@@ -494,9 +527,6 @@
     align-content: center;
   }
 
-
-
-
 .panel1{
     width:1020.33px;
     height:368px;
@@ -506,8 +536,7 @@
     padding:7px;
     background-color:red;
     background-image: linear-gradient(302deg, #f4f5f8, #f0f3fa 48%, #fafafa);   align-items:center;
-    float:left;
-    
+    float:left;  
 }
 
 .panel2{
@@ -526,11 +555,35 @@
   width: 144px;
   height: 156px;
   position:absolute;
-  top:324.33px;
-  left:959px;
-  padding-top:10.67px;
+  top:26.33px;
+  left:1002px;
+  padding-top:8.67px;
   border-bottom-left-radius: 18.67px;
   border-bottom-right-radius: 18.67px;
+  font-family: Objective;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  box-shadow: 0 0 50px 0 rgba(208, 200, 240, 0.16);
+  background-color: #ffffff;
+  color: #05276c;
+  text-align:left;
+  z-index:1;
+}
+
+.dropDownFilter{
+  width: 238px;
+  height: 441.33px;
+  position:absolute;
+  top:324.33px;
+  left:714.67px;
+  padding-top:10.67px;
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
   font-family: Objective;
   font-size: 10px;
   font-weight: bold;

@@ -1,27 +1,26 @@
 import React, {Component} from 'react';
 import '../seedActualStyle.css';
 import check from '../img/check-mark-xxl.png'
- class Card extends Component{
+
+function GetDiv(props){
+    if(props.comment === 'Ready for Market!')
+        return <div className= 'Rectangle-312-ready' ><img src={check} alt="tickmark" className="check"/></div>;
+    else
+        return  <div className={props.comment==='New!' ? 'Rectangle-312-new' : 'Rectangle-312'}></div>;
+}
+
+class Card extends Component{
      
+   constructor(props){
+       super(props);
+       this.state={
+           comment:'',
+       }
+   }
     render(){
-        if(this.props.data.comment === 'Ready for Market!'){
             return(
-                <div className="Rectangle-231-ready"  >
-                    <div className= 'Rectangle-312-ready' style={{color:"white"}}><img src={check} className="check"/></div>
-                    
-                    <div className="comment" style={{color:"white"}}> {this.props.data.comment}  </div>
-                    <div className="date" style={{color:"white"}}>     {this.props.data.date}     </div>
-                    <div className="mainline" style={{color:"white"}}> {this.props.data.mainline} </div> 
-                    <div className="ctgry" style={{color:"white"}}> {this.props.data.category} </div>
-                </div>
-    
-            )
-        }
-        else{
-            return(
-                <div className="Rectangle-231" >
-                
-                <div className={this.props.data.comment==='New!' ? 'Rectangle-312-new' : 'Rectangle-312'}></div>
+                <div className={this.props.data.comment ==='Ready for Market!'?"Rectangle-231-ready":"Rectangle-231" } >
+                <GetDiv comment={this.props.data.comment}/>
                 <div className="comment"> {this.props.data.comment}  </div>
                 <div className="date">     {this.props.data.date}     </div>
                 <div className="mainline"> {this.props.data.mainline} </div> 
@@ -29,7 +28,7 @@ import check from '../img/check-mark-xxl.png'
             </div>
 
             )
-        }
+        
            
         
     }

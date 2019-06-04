@@ -2,14 +2,15 @@
 .body{
     background-image: linear-gradient(302deg, #f4f5f8, #f0f3fa 48%, #fafafa);  
 }
+
 .panel{
   width:auto;
   height:350px;
 }
+
 .seedLogo{
     width: 114px;
     height: 49.5px;
-    margin-left:94.6px;
     margin-top:26.7px; 
     display:inline-block;
 }
@@ -73,6 +74,7 @@
     top:155.33px;
     object-fit: contain;
 }
+
 .Ellipse-5 {
     width: 166px;
     height: 166px;
@@ -81,7 +83,7 @@
     left:100px;
     border-radius:83px;
     box-shadow: 0 0 33.3px 0 rgba(157, 134, 255, 0.16);
-    background-image: linear-gradient(to bottom, #616bfc, #7a96f9);
+    background-image: linear-gradient(320deg, #08cbd3, #56e5eb);
 }
 
 .JD {
@@ -119,7 +121,7 @@
     
   }
 
-  .Business-Technology-Analyst-16-Ideas-3-Assets {
+.Business-Technology-Analyst-16-Ideas-3-Assets {
     width: 147.3px;
     height: 3422.6px;
     position: absolute;
@@ -136,7 +138,7 @@
     color: #05276c;
   }
   
-  .Business-Technology-Analyst-16-Ideas-3-Assets-text-style-1 {
+.Business-Technology-Analyst-16-Ideas-3-Assets-text-style-1 {
     position: absolute;
     left:287.33px;
     top: 190.6px;
@@ -152,14 +154,61 @@
     text-align: left;
   }
 
-  .My-Ideas {
+.Rectangle-341 {
+    width: 220.67px;
+    height: 36px;
+    position:absolute;
+    left:142px;
+    top:300px;
+    border-radius: 20px;
+    background-color:blue;
+    box-shadow: 0 0 50px 0 rgba(208, 200, 240, 0.16);
+    background-image: linear-gradient(to bottom, #c1cfff, #cdddfc);
+  }
+.ideasButton{
+  text-align:center;
+  margin-top:13px;
+  font-family: Objective;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.87;
+  letter-spacing: normal;
+  text-align: center;
+  color: #05276c;
+}
+
+.assetsButton{
+  margin-left:116.67px;
+  text-align:center;
+  margin-top:13px;
+  font-family: Objective;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.87;
+  letter-spacing: normal;
+  text-align: center;
+  color: #05276c;
+}
+
+.Rectangle-311 {
+    width: 116.67px;
+    height: 36px;
+    position:absolute;
+    left:142px;
+    top:300px;
+    border-radius: 20px;
+    box-shadow: 0 0 50px 0 rgba(208, 200, 240, 0.16);
+    background-color: #ffffff;
+   
+}
+
+.My-Ideas {
     width: 96px;
     height: 20px;
-    margin-left:
-    {/* 
-    position:absolute;
-    top:322px;
-    left:100px;*/}
     font-family: Objective;
     font-size: 20px;
     font-weight: bold;
@@ -171,18 +220,19 @@
     color: #05276c;
   }
 
-  .Ellipse-43 {
+.Ellipse-43 {
     width: 36px;
     height: 36px;
+    position:absolute;
     top:299.3px;
     left:916.6px;
     border-radius:18px;
     box-shadow: 3px 3px 15px 0 rgba(170, 186, 201, 0.16);
     background-color: #ffffff;
-    position:absolute;
+   
 }
 
-  .filter {
+.filter {
     width: 14.26px;
     height: 14px;
     position:absolute;
@@ -191,7 +241,7 @@
     object-fit: contain;
   }
 
-  .Rectangle-232 {
+.Rectangle-232 {
     width: 144px;
     height: 36px;
     position:absolute;
@@ -200,9 +250,10 @@
     border-radius: 21.33px;
     box-shadow: 0 0 50px 0 rgba(208, 200, 240, 0.16);
     background-color: #ffffff;
+  
   }
 
-  .seed-26 {
+.seed-26 {
     width: 13.26px;
     height: 14.46px;
     position:absolute;
@@ -211,7 +262,7 @@
     object-fit: contain;
   }
 
-  .Sort-by {
+.Sort-by {
     width: 38px;
     height: 9.33px;
     position:absolute;
@@ -228,7 +279,7 @@
     color: #05276c;
   }
 
-  .Arrow---SEED-20 {
+.Arrow---SEED-20 {
     width: 8px;
     height: 4.67px;
     position:absolute;
@@ -242,18 +293,29 @@
     width: 325.26px;
     height: 170.13px;
     border-radius: 21.33px;
-    box-shadow: 0 0 50px 0 rgba(208, 200, 240, 0.16);
+    box-shadow: 0 0 50px 0 rgba(128, 124, 147, 0.16);
     background-color: #ffffff;
     float:left;
     margin:7px;
   }
 
+  .Rectangle-231-ready {
+    
+    width: 325.26px;
+    height: 170.13px;
+    border-radius: 21.33px;
+    box-shadow: 0 0 50px 0 rgba(192, 182, 239, 0.3);
+    background-image: linear-gradient(294deg, #96a9fc, #7781ff);
+    color:white;
+    float:left;
+    margin:7px;
+  }
 
 .Rectangle-312 {
-
     width: 13.53px;
     height: 28.8px;
-    border-radius: 5px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
     -webkit-backdrop-filter: blur(50px);
     backdrop-filter: blur(50px);
     background-image: linear-gradient(230deg, #889efc, #7b84f7);
@@ -268,9 +330,68 @@
     line-height: 1;
     letter-spacing: normal;
     color: #ffffff;
-    float:left;    
-    
+    float:left;     
 }
+
+.Rectangle-312-new {
+  width: 13.53px;
+  height: 28.8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  background-image: linear-gradient(230deg, #10dae2, #56e5eb);
+  padding-left:18.8px;
+  padding-top:10.06px;
+  margin-top:19.73px;
+  
+  font-family: Objective;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #ffffff;
+  float:left;    
+}
+.Rectangle-312-ready {
+  width: 26.86px;
+  height: 26.86px;
+  border-radius:13.5px;
+  background-color: #5C64D9;
+ /* opacity:0.23;*/
+  padding-left:8px;
+  padding-top:10px;
+  margin-top:19.73px;
+  margin-left:18.53px;
+  margin-right:8.8px;
+  font-family: Objective;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #ffffff;
+  float:left;    
+ 
+}
+
+.check{
+  width:10.33px;
+  height:7.93px;
+  display:block;
+  color:white;
+  
+}
+
+.Path-11326 {
+  width: 15.5px;
+  height: 11.9px;
+  background-color: #ffffff;
+}
+
 .comment{
     margin-left:25px;
     margin-top:29.79px;
@@ -284,6 +405,7 @@
     text-align: left;
     color: #3b42ff;
 }
+
 
 .date {
     margin-left:25px;
@@ -316,7 +438,7 @@
     float:left;
  }
 
-  .ctgry {
+.ctgry {
     width: 280px;
     height: 9.33px;
     margin-left:25px;
@@ -333,13 +455,9 @@
 }
 
 
-  .My-Assets {
+.My-Assets {
     width: 96px;
     height: 20px;
-    {/*
-    position:absolute;
-    top:736.6px;
-    left:100px;*/}
     font-family: Objective;
     font-size: 20px;
     font-weight: bold;
@@ -351,30 +469,26 @@
     color: #05276c;
   }
 
-  .row-wrapper{
+.row-wrapper{
     padding-left:120px;
     padding-right:120px;
     margin-bottom:33.46px;
     align-content: center;
   }
   
-  .outer-wrapper{
-    align-content:center;
-    padding:auto;
-  }
-  
-  .ideasRow{
+.ideasRow{
     margin-left:127px;
     margin-right:127px;
     margin-bottom:13.6px;
   }
   
-  .assetsRow{
+.assetsRow{
     margin-left:127px;
     margin-right:127px;
     margin-bottom:13.6px;
   }
-  .headerCollection{
+
+.headerCollection{
     margin-left:154px;
     margin-right:127px;
     align-content: center;
@@ -383,7 +497,7 @@
 
 
 
-  .panel1{
+.panel1{
     width:1020.33px;
     height:368px;
     margin-top:270px;
@@ -396,7 +510,7 @@
     
 }
 
-  .panel2{
+.panel2{
     width:1020.33px;
     height:368px;
     margin-left:85px;
@@ -408,3 +522,55 @@
     float:left; 
 }
 
+.dropDown{
+  width: 144px;
+  height: 156px;
+  position:absolute;
+  top:324.33px;
+  left:959px;
+  padding-top:10.67px;
+  border-bottom-left-radius: 18.67px;
+  border-bottom-right-radius: 18.67px;
+  font-family: Objective;
+  font-size: 10px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-align: left;
+  box-shadow: 0 0 50px 0 rgba(208, 200, 240, 0.16);
+  background-color: #ffffff;
+  color: #05276c;
+  text-align:left;
+  z-index:1;
+}
+
+ul{
+    list-style-type:none;
+}
+
+ul,li{
+    margin-left:8px;
+    margin-bottom:10.67px;
+    padding:2px;
+    font-size:10px;
+}
+  
+ul li:hover:before {
+    color: #56e5eb;  
+    content: "\2022"; 
+    font-size: 10px; 
+    padding-right: 4px; 
+    position: relative;
+    top: 0em; 
+    vertical-align:middle;
+}
+
+.Ellipse-66 {
+    width: 26.86px;
+    height: 26.86px;
+    border-radius:13.43px;
+    opacity: 0.23;
+    background-color: #000057;
+}

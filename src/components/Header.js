@@ -1,9 +1,4 @@
 import React, {Component} from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-
-
-import Card from './Card'
-import Data from './object.json'
 import '../seedActualStyle.css';
 import logo from '../img/Rectangle4.png';
 import seed14 from '../img/SEED-14.png';

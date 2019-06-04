@@ -1,9 +1,4 @@
 import React, {Component} from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
-
-
-import Card from './Card'
-import Data from './object.json'
 import '../seedActualStyle.css';
 import logo from '../img/Rectangle4.png';
 import seed14 from '../img/SEED-14.png';
@@ -13,20 +8,46 @@ import seed27 from "../img/seed-27.svg" ;
 import seed26 from "../img/seed-26.svg";
 import arrow from "../img/Arrow - SEED-20.svg"
 
-
 class HeaderCollection extends Component{
 
+
+    constructor() {
+        super();
+        
+        this.state = {
+          showMenu: false,
+        }
+
+        this.showMenu = this.showMenu.bind(this);
+        this.closeMenu = this.closeMenu.bind(this);
+      }
+
+     
+
+    showMenu(event) {
+        event.preventDefault();
+        this.setState({ showMenu: true }, () => {
+          document.addEventListener('click', this.closeMenu);
+        });
+      }
+      
+      closeMenu() {
+            this.setState({ showMenu: false }, () => {
+              document.removeEventListener('click', this.closeMenu);
+        });   
+      }
+    
     render(){
         return(
             <div >
-                <div>
-                <img src={logo}  className="seedLogo"/>
+            
+                <div className="headerCollection">
+                <img src={logo} alt="seed logo"  className="seedLogo"/>
                 <div className="Ellipse-1"></div>
-                <img src={seed14}  className="SEED-14"/>                
+                <img src={seed14}  alt="symbol" className="SEED-14"/>                
                 <div className="Ellipse-2"></div>
-                <img src={seed15} className="SEED-15"/>
+                <img src={seed15} alt="symbol" className="SEED-15"/>
 
-                
                 
                 <div className="Ellipse-5"></div>
                 <div className="JD">JD</div>
@@ -36,21 +57,49 @@ class HeaderCollection extends Component{
                 
 
                 <div className="Ellipse-7"></div>
-                <img src={questionmark24} className="question-mark-24"></img>
+                <img src={questionmark24} alt="symbol" className="question-mark-24"></img>
                 
                 <div className="Business-Technology-Analyst-16-Ideas-3-Assets">Business Technology Analyst </div>
                 <div className="Business-Technology-Analyst-16-Ideas-3-Assets-text-style-1" >16 Ideas. 3 Assets.</div>
+                
 
+                <div className="Rectangle-341"><div className="assetsButton">Assets</div></div>   
+                <div className="Rectangle-311" > <div className="ideasButton">Ideas</div></div>     
                 
                 <div className="Ellipse-43"></div>
-                <img src={seed27} className="filter" />
+                <img src={seed27} alt="filter" className="filter" />
 
-                <div className="Rectangle-232"> </div>
-                <img src={seed26} className="seed-26" />
-                <div className="Sort-by">Sort by</div>
-                <img src={arrow} className="Arrow---SEED-20" />             
+                {this.state.showMenu
+                ?(
+                    
+                    <div className="dropDown" ref={(element) => {this.dropdownMenu = element;}}>
+                    <ul >
+                        <li >New</li>
+                        <li>Relevance</li> 
+                        <li>Popularity</li>
+                        <li>Stages(High to Low)</li>
+                        <li>Stages(Low to High)</li>
+                    </ul>
+                   </div>
+
+
+                )
+                :(
+                    null
+                )}
+                <div className="Rectangle-232" onClick={this.showMenu} > </div>
+                <img src={seed26} alt="updown arrow"className="seed-26" />
+               
+               <div className="Sort-by">Sort by</div>
+                <img src={arrow} alt="arrow" className="Arrow---SEED-20" />  
+               
+               
                 
-                </div> 
+                            
+                
+            
+                
+           </div> 
                 
             </div>
         )

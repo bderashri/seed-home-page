@@ -167,7 +167,8 @@
     background-image: linear-gradient(to bottom, #c1cfff, #cdddfc);
     float:left;
   }
-.ideasButton{
+ 
+  .ideasButton{
   margin-left:50px;
   text-align:center;
   font-family: Objective;

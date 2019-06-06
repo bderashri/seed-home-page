@@ -11,50 +11,173 @@ import arrow from "../img/Arrow - SEED-20.svg"
 /*import HeaderCollection from './HeaderCollection';*/
 
 class Panel extends Component{     
+    
+     ideaArray= Data.myIdeas;
+     assetArray= Data.myAssets;
 
-    constructor() {
-        super();
-        
+    constructor(props) {
+        super(props);
         this.state = {
           showMenu: false,
-          IdeaClicked:false,
-          AssetClicked:false,
+          IdeaClick:false,
+          AssetClick:false,
+          StagesHighClick:false,
+          StagesLowClick:false,
+          ideaList: [],
+          assetList: [],
         }
 
         this.showMenu = this.showMenu.bind(this);
         this.closeMenu = this.closeMenu.bind(this);
         this.IdeaClicked = this.IdeaClicked.bind(this);
         this.AssetClicked = this.AssetClicked.bind(this);
-        this.CloseAsset = this.CloseAsset.bind(this);
-        this.CloseIdea = this.CloseIdea.bind(this);
+        //this.CloseStagesHighClicked = this.CloseStagesHighClicked(this);
+        //this.CloseStagesLowClicked = this.CloseStagesLowClicked(this);
+        //this.sortArrayOfObjects= this.sortArrayOfObjects.bind(this);
+        this.sortMainline = this.sortMainline.bind(this);
+        this.sortIdea = this.sortIdea.bind(this);
+        this.sortAsset = this.sortAsset.bind(this);
+        this.sortHighAsset = this.sortHighAsset.bind(this);
+    
+       this.sortArray = this.sortArray.bind(this);
     }
 
-    IdeaClicked(event){
-        event.preventDefault();
-        this.setState({ IdeaClicked: true },() => {
-            document.addEventListener('click', this.CloseIdea);
-          });
-    }
 
-    CloseIdea() {
-        this.setState({ IdeaClicked: false }, () => {
-          document.removeEventListener('click', this.CloseIdea);
-        });   
-    }
+    
+   sortMainline(a,b){
+    var x = a.mainline.toLowerCase();
+    var y = b.mainline.toLowerCase();
+    return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+   }
 
-    AssetClicked(event){
-        event.preventDefault();
-        this.setState({ AssetClicked: true }, () => {
-            document.addEventListener('click', this.CloseAsset);
+   rsortMainline(a,b){
+    var x = a.mainline.toLowerCase();
+    var y = b.mainline.toLowerCase();
+    return ((x > y) ? -1 : ((x < y) ? 1 : 0));
+   }
+
+   sortArray(){
+       if(this.IdeaClicked){
+        //alert("inside idea sort")
+        var newList = this.ideaArray;
+        newList.sort(this.sortMainline)
+        this.setState({
+            ideaList : newList
+        });
+       }
+
+       if(this.AssetClicked){
+       // alert("inside asset sort")
+        var newList = this.assetArray;
+        newList.sort(this.sortMainline)
+        this.setState({
+            assetList : newList
+        });
+       }
+       
+       if(this.state.StagesLowClick){
+            var newList = this.state.assetList;
+        newList.sort(this.sortMainline)
+        this.setState({
+            assetList : newList
+        });
+
+        newList = this.state.ideaList;
+        newList.sort(this.sortMainline)
+        this.setState({
+            ideaList : newList
+        });
+       }
+       if(this.state.StagesHighClick){
+            var newList = this.state.assetList;
+            newList.sort(this.rsortMainline)
+            this.setState({
+                assetList : newList
+            });
+
+            newList = this.state.ideaList;
+            newList.sort(this.rsortMainline)
+            this.setState({
+                ideaList : newList
+            });
+       }
+
+    
+   }
+    sortIdea()  {
+           alert("inside idea sort")
+            var newList = this.ideaArray;
+            newList.sort(this.sortMainline)
+            this.setState({
+                ideaList : newList
+            });
+        }
+
+    sortAsset(){
+       // alert("inside asset sort")
+        var newList = this.assetArray;
+        newList.sort(this.sortMainline)
+        this.setState({
+            assetList : newList
+        });
+    }
+            
+    sortHighAsset(){
+       // alert("set state done")
+        var newList = this.state.assetList;
+        newList.sort(this.rsortMainline)
+        this.setState({
+            assetList : newList
+        });
+
+        newList = this.state.ideaList;
+        newList.sort(this.rsortMainline)
+        this.setState({
+            ideaList : newList
         });
     }
 
-    CloseAsset() {
-        this.setState({ AssetClicked: false }, () => {
-          document.removeEventListener('click', this.CloseAsset);
-        });   
+    sortLowAsset(){
+      //  alert("set state done")
+        var newList = this.state.assetList;
+        newList.sort(this.sortMainline)
+        this.setState({
+            assetList : newList
+        });
+
+        newList = this.state.ideaList;
+        newList.sort(this.sortMainline)
+        this.setState({
+            ideaList : newList
+        });
     }
 
+
+    IdeaClicked(event){
+        event.preventDefault();
+        this.setState({ IdeaClick: true })/*,() => {
+            document.addEventListener('click', this.CloseIdea);
+          });*/
+        this.setState({ AssetClick: false })/*, () => {
+            document.removeEventListener('click', this.CloseAsset);
+          }); */
+        this.sortArray();
+        
+    }
+
+ 
+    AssetClicked(event){
+        event.preventDefault();
+        this.setState({ AssetClick: true })/*, () => {
+            document.addEventListener('click', this.CloseAsset);
+        });*/
+        this.setState({ IdeaClick: false })/*, () => {
+            document.removeEventListener('click', this.CloseIdea);
+          });  */
+        this.sortArray();
+    }
+
+ 
     showMenu(event) {
         event.preventDefault();
         this.setState({ showMenu: true }, () => {
@@ -69,11 +192,43 @@ class Panel extends Component{
       }
     
       
+    StagesHighClicked(event){
+        //event.preventDefault();
+        this.setState({StagesHighClick:true})
+        this.setState({StagesLowClick:false})
+       /*this.setState({StagesLowClick:false})/*,() => {
+            document.addEventListener('click', this.CloseStagesHighClicked);
+         });*/
+         this.sortArray();
+
+    }
+      
+    StagesLowClicked(){
+        this.setState({StagesLowClick:true})
+        this.setState({StagesHighClick:false})
+        this.sortArray();
+    }
+/*
+
+    CloseStagesHighClicked(){
+        
+         this.setState({StagesHighClicked:false}, ()=> {
+            document.removeEventListener('click', this.CloseStagesHighClicked)
+        });
+        
+        
+    }
+
+    CloseStagesLowClicked(){
+        this.setState({StagesLowClicked:false}, ()=> {
+            document.removeEventListener('click', this.CloseStagesLowClicked)
+        });
+    }*/
+       
+
     render(){
         
-        const ideaList = Data.myIdeas
-        const assetList = Data.myAssets
-
+        
         return(
             <div>
                <Container fluid="true"  >
@@ -111,15 +266,15 @@ class Panel extends Component{
                          </div>    
                      </Col>
 
-                    {this.state.showMenu
+                    {this.state.showMenu 
                     ?(
                         <div className="dropDown" ref={(element) => {this.dropdownMenu = element;}}>
                         <ul >
                             <li >New</li>
                             <li>Relevance</li> 
                             <li>Popularity</li>
-                            <li>Stages(High to Low)</li>
-                            <li>Stages(Low to High)</li>
+                            <li onClick={this.StagesLowClicked.bind(this)}> Stages(High to Low)</li>
+                            <li onClick={this.StagesHighClicked.bind(this)}>Stages(Low to High)</li>
                         </ul>
                     </div>
                     )
@@ -129,7 +284,7 @@ class Panel extends Component{
 
                  </Row>
 
-                    {this.state.IdeaClicked
+                    {this.state.IdeaClick
                     ?(
                         <div>
                         <Row > 
@@ -137,9 +292,9 @@ class Panel extends Component{
                                 <div className="My-Ideas">My Ideas</div>
                             </Col>
                         </Row>
-
+                        
                         <Row className="row-wrapper" >
-                            {ideaList.map((idea) => {
+                            {this.state.ideaList.map((idea) => {
                                 return (
                                     <Col sm={4} >
                                     <Card data={idea}/>
@@ -151,7 +306,7 @@ class Panel extends Component{
                     }
                     
                      
-                    {this.state.AssetClicked
+                    {this.state.AssetClick
                     ?(
                         <div>
 
@@ -162,7 +317,7 @@ class Panel extends Component{
                         </Row>
                     
                         <Row className="row-wrapper" >
-                            {assetList.map((asset) => {
+                            {this.state.assetList.map((asset) => {
                                 return (
                                 <Col sm={4} >
                                 <Card data={asset}/>
